@@ -23,7 +23,7 @@ The program is executed as any other executable file (that needs Root) on Linux.
 If it detects a TrackPoint, the program will welcome you, since that, you'll be able to interact with the TrackPoint, the program will show diferent messages until it "gets tired" and closes itself.
 
 ## Operation
-**TrackPoint Detection:** The first big step int he program is to detect what device corresponds to a TrackPoint, this is done by reading the file `/proc/bus/input/devices`, the program will return the device that is recognized as a mouse and includes `trackpoint` in its name. If not mouse with `trackpoint` in its name is found, it will discard devices with `optical`, `trackpad`, `wired` or `usb` in their names and return the remaining device... Once a TrackPoint is detected we can read its events.
+**TrackPoint Detection:** The first big step int he program is to detect what device corresponds to a TrackPoint, this is done by reading the file `/proc/bus/input/devices` (im lazy), the program will return the device that is recognized as a mouse and includes `trackpoint` in its name. If not mouse with `trackpoint` in its name is found, it will discard devices with `optical`, `trackpad`, `wired` or `usb` in their names and return the remaining device... Once a TrackPoint is detected we can read its events.
  
 **Linux Subsystem API:** This program uses the Linux Input Subsystem API (in a very simple way) to read the TrackPoint raw events directly from the kernel. Since Linux follows the Unix's idea that "Everything is a file", this process is as simple as reading the file `/dev/input/eventX` file, and using the struct `input_event` (also provided by Linux) to parse it.
 
