@@ -28,8 +28,8 @@ If it detects a TrackPoint, the program will welcome you, since that, you'll be 
 **Linux Subsystem API:** This program uses the Linux Input Subsystem API (in a very simple way) to read the TrackPoint raw events directly from the kernel. Since Linux follows the Unix's idea that "Everything is a file", this process is as simple as reading the file `/dev/input/eventX` file, and using the struct `input_event` (also provided by Linux) to parse it.
 
 ## About the phrases and the narrative
-Although this started as a joke without a deep meaning, as the weeks i decided to give the program deeper and more human "toughts", the computer becomes a character with feelings, desires and insecurities.
+Although this started as a joke without any interesting meaning, as the weeks i decided to give the program deeper and more human-like "toughts", the computer becomes a character with feelings, desires and insecurities.
 
-While the program runs, we'll see it is jealous to other programs, specially server-based programs, and Artificial Intelligences, the program is technically opposite to server based programs and AIs, it is an small C program that runs in the user's hardware and it's limited to say the same phrases, that makes it feel insecure and inferior to them. Also, the program is emotionally and technically dependent of `root`, if you try to run the program with any other user you will be instantly rejected.
+While the program runs,it seems to be jelous to other programs, specially server-based programs, and Artificial Intelligences, the program is technically opposite to server based programs and AIs, it is an small C program that runs in the user's hardware and it's limited to show the same phrases on screen, that makes it feel insecure and inferior to them. Also, the program is technically dependent of `root`, under the narrative it prefers root over any other user, if you try to run the program with any other user you will be instantly rejected.
 
 The phrases can be seen in [main.c:line 48](https://github.com/pasteluengas/thinkpad-masturbator/blob/main/main.c#L48).
